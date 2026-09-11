@@ -1,4 +1,6 @@
 alunos = []
+
+
 def cadastrar():
     nome = input("Nome do aluno: ").strip()
     if nome == "":
@@ -10,9 +12,18 @@ def cadastrar():
             return
     alunos.append(nome)
     print("Aluno cadastrado.")
+def listar():
+    if len(alunos) == 0:
+        print("Nenhum aluno cadastrado.")
+        return
+    print("\n--- ALUNOS ---")
+    for numero, aluno in enumerate(alunos, start=1):
+        print(f"{numero}. {aluno}")
+    print(f"Total: {len(alunos)} aluno(s)")
 while True:
     print("\n--- CADASTRO DE ALUNOS ---")
     print("1 - Cadastrar")
+    print("2 - Listar")
     print("0 - Sair")
     opcao = input("Escolha: ")
     if opcao == "0":
@@ -20,5 +31,7 @@ while True:
         break
     elif opcao == "1":
         cadastrar()
+    elif opcao == "2":
+        listar()
     else:
         print("Opção inválida.")
