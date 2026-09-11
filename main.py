@@ -1,3 +1,5 @@
+alunos = []
+
 def cadastrar():
 	nome = input("Nome do aluno: ").strip()
 	if nome == "":
