@@ -39,7 +39,7 @@ def excluir_aluno():
 			alunos.remove(aluno)
 			print(f"Aluno excluído: {aluno}")
 			return
-	print("Aluno não encontrado.")
+	print("Aluno não foi encontrado.")
 while True:
 	print("\n--- CADASTRO DE ALUNOS ---")
 	print("1 - Cadastrar")
