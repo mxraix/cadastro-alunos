@@ -30,9 +30,12 @@ def buscar():
 	print("Aluno não encontrado.")
 
 def excluir_aluno():
-	nome = input("Nome do aluno para excluir: ")
+	nome = input("Nome do aluno para excluir: ").strip()
+	if nome == "":
+		print("Digite um nome para excluir.")
+		return
 	for aluno in alunos:
-		if aluno == nome:
+		if aluno.lower() == nome.lower():
 			alunos.remove(aluno)
 			print(f"Aluno excluído: {aluno}")
 			return
